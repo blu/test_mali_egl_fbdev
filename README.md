@@ -7,7 +7,7 @@ Hypothetically they should run on any arm64 userland featuring a mali-fbdev GLES
 How to run
 ----------
 
-Each individual test can be run via its corresponding binary but that requires familiarity with the test CLI. Alternatively, a dedicated script `test.sh` is provided that runs all four unit tests in a row, for a set number of frames, and finally prints the SoC temperatures. That script was written and tested on an ODROID-N2 -- using it on other hosts will require apt editing. At the very minimum changes to the hardcoded `taskset` and EGL configs are expected on non-N2 hosts.
+Each individual test can be run via its corresponding binary but that requires familiarity with the test CLI. Alternatively, a dedicated script `test.sh` is provided that runs all four unit tests in a row, for a set number of frames, and finally prints the SoC temperatures. That script was written and tested on an ODROID-N2 -- using it on other hosts will require apt editing. At the very least changes to the hardcoded `taskset`, `bitness` and `fsaa` are expected on non-N2 hosts.
 
 Due to the nature of mali-fbdev stack as of this writing, running the tests requires root privileges. For instance, run the script as:
 
